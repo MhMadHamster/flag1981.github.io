@@ -9,10 +9,8 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: "common",
-      chunks: [
-        "index"
-      ],
+      names: ["common", "manifest"],
+      minChunks: Infinity,
     })
   ],
   output: {
